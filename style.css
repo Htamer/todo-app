@@ -1,3 +1,67 @@
+@import url(./colors.css);
+
 :root {
     font-family: ubuntu, sans-serif;
+}
+
+body{
+    --main-background: var(--color-grey-800);
+    --text-color: var(--color-grey-50);
+    --border-color: var(--color-grey-800-light);
+    color: var(--text-color);
+    background-color: var(--main-background);
+    position: relative;
+    padding-top: 50px;
+    transition: .25s ease;
+
+}
+
+body.light{
+    --main-background: var(--color-grey-50);
+    --text-color: var(--color-grey-900);
+    --border-color: var(--color-grey-50-dark);
+}
+
+.to-do-container
+{
+    width: 600px;
+    max-width: 95vw;
+    margin:auto;
+    min-height: 600px;
+    padding: 75px;
+    border-radius: 1rem;
+    box-shadow: 0px 2px 10px -1px rgba(0,0,0,0.5);
+/* Note Test 2 */
+
+}
+
+.to-do-container * {
+    margin: 0;
+    
+
+}
+
+.to-do-container > h1 {
+    margin-bottom: 10px;
+    text-align:center;
+    /* Always make sure to put the semi-colon at the end.  */
+    
+}
+
+
+.theme-button{
+    position: absolute;
+    top:10px;
+    right:10px;
+    padding:10px;
+    border: 1px solid var(--border-color);
+    border-radius: 3px;
+    cursor: pointer;
+    display: grid;
+    place-items: center;
+}
+
+.theme-button>i{
+    width:16px;
+    height:16px;
 }
